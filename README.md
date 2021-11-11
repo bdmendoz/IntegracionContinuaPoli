@@ -2,4 +2,6 @@
 trabajo de integracion continua Poli
 
 # Integrantes
-. Jonathan Cruz
+
+1. Bayron Daniel Mendoza Tovar
+2. Jonathan Andres Cruz Tellez
