@@ -2,3 +2,4 @@ Politécnico grancolombiano - Integracion continua:
 Integrantes : 
 Bayron Daniel Mendoza Tovar
 Jonathan Andres Cruz Tellez
+Juan Pablo Salazar Portilla
