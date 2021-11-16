@@ -4,4 +4,6 @@ services:
     image: httpd
   opSystem:
     image: ubuntu
+    tty: true
+    stdin_open: true
 
