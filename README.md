@@ -1,5 +1,5 @@
 # IntegracionContinuaPoli
-trabajo de integracion continua Poli
+trabajo de integración continua Poli
 
 # Integrantes
 
