@@ -8,3 +8,13 @@ trabajo de integración continua Poli
 3. Juan Pablo Salazar Portilla
 4. Mendez Quintero Maricela
 5. Jose David Yate Capera
+
+# Pasos para realizar la instalación
+
+`cd docker`
+
+`cp .env.example .env`
+
+Se llenan los datos correspondientes en el nuevo archivo .env
+
+`docker-compose up -d --build`
