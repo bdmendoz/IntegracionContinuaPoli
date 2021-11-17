@@ -11,6 +11,10 @@ trabajo de integración continua Poli
 
 # Pasos para realizar la instalación
 
+Se debe crear el dominio en el pc local, en el caso de linux se hace en
+
+`sudo nano /etc/hosts`
+
 `cd docker`
 
 `cp .env.example .env`
