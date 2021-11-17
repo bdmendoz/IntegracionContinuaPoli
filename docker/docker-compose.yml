@@ -1,0 +1,45 @@
+version: "3.3"
+
+services:
+  back:
+    build:
+      context: "./conf/nginx"
+    container_name: ${PROJECT_NAME}-back
+    restart: always
+    tty: true
+    environment:
+      - VIRTUAL_HOST=${VIRTUAL_HOST_BACK}
+    volumes:
+      - ${BACK}:/var/www/html
+      - ./conf/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"
+    links:
+      - php
+
+  mysql:
+    build:
+      context: "./conf/mysql"
+    container_name: ${PROJECT_NAME}-mysql
+    restart: always
+    tty: true
+    volumes:
+      - ${MYSQL_DATA}:/var/lib/mysql
+    ports:
+      - "4001:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+  php:
+    build:
+      context: "./conf/php"
+    container_name: ${PROJECT_NAME}-php
+    tty: true
+    restart: always
+    volumes:
+      - ${BACK}:/var/www/html
+    links:
+      - mysql
